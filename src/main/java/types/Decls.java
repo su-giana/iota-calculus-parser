@@ -1,5 +1,6 @@
 package types;
 
+import decl.Decl;
 import lombok.AllArgsConstructor;
 
 import java.util.List;

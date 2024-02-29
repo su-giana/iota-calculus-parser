@@ -1,5 +1,6 @@
 package types;
 
+import literal.Literal;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

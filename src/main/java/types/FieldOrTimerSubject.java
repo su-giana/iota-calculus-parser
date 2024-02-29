@@ -1,5 +1,6 @@
 package types;
 
+import expression.Expression;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

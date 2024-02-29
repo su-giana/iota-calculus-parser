@@ -1,5 +1,6 @@
 package types;
 
+import emca.predicate.Predicate;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

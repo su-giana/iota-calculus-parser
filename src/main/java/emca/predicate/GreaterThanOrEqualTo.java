@@ -1,5 +1,6 @@
 package emca.predicate;
 
+import expression.Expression;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

@@ -1,6 +1,7 @@
 package types;
 
 import lombok.AllArgsConstructor;
+import rule.Rule;
 
 import java.util.List;
 

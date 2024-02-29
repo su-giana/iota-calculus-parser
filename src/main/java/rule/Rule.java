@@ -6,6 +6,6 @@ import types.Description;
 
 @AllArgsConstructor
 public abstract class Rule {
-    private Description description;
-    private Decls decls;
+    final private Description description;
+    final private Decls decls;
 }

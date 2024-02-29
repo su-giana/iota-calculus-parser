@@ -6,7 +6,7 @@ import types.Group;
 
 @AllArgsConstructor
 public class GroupEvent {
-    private Group group;
-    private BoundVariable boundVariable;
-    private EventHandler eventHandler;
+    final private Group group;
+    final private BoundVariable boundVariable;
+    final private EventHandler eventHandler;
 }

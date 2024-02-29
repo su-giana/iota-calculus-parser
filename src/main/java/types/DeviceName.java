@@ -4,5 +4,5 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class DeviceName {
-    private Name deviceName;
+    final private Name deviceName;
 }

@@ -7,7 +7,7 @@ import types.FieldOrTimerSubject;
 // fOrM [Constant ~> Constant']
 @AllArgsConstructor
 public class EventFromTo {
-    private FieldOrTimerSubject fieldOrTimerSubject;
-    private EventConstant eventConstantFrom;
-    private EventConstant eventConstantTo;
+    final private FieldOrTimerSubject fieldOrTimerSubject;
+    final private EventConstant eventConstantFrom;
+    final private EventConstant eventConstantTo;
 }

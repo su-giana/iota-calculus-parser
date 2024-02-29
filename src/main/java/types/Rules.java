@@ -6,5 +6,5 @@ import java.util.List;
 
 @AllArgsConstructor
 public class Rules {
-    private List<Rule> rules;
+    final private List<Rule> rules;
 }

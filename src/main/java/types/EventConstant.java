@@ -4,5 +4,5 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class EventConstant {
-    private Literal eventConstant;
+    final private Literal eventConstant;
 }

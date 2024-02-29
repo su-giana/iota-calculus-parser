@@ -6,5 +6,5 @@ import types.FieldOrTimerSubject;
 // [. ~> ]
 @AllArgsConstructor
 public class JustEvent extends EventHandler {
-    private FieldOrTimerSubject fieldOrTimerSubject;
+    final private FieldOrTimerSubject fieldOrTimerSubject;
 }

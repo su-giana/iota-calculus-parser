@@ -4,5 +4,5 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class Name {
-    private String name;
+    final private String name;
 }

@@ -4,5 +4,5 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class BoundVariable {
-    private String boundVariable;
+    final private String boundVariable;
 }

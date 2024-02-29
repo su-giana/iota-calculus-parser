@@ -6,5 +6,5 @@ import java.util.List;
 
 @AllArgsConstructor
 public class Group {
-    List<DeviceName> group;
+    final List<DeviceName> group;
 }

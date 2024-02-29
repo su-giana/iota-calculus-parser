@@ -5,5 +5,5 @@ import types.Name;
 
 @AllArgsConstructor
 public abstract class Decl {
-    private Name declName;
+    final private Name declName;
 }

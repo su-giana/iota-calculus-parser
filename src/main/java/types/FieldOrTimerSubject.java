@@ -4,5 +4,5 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class FieldOrTimerSubject {
-    private Expression expression;
+    final private Expression expression;
 }

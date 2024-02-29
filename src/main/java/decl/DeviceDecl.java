@@ -6,7 +6,7 @@ import types.Name;
 import java.util.List;
 
 public class DeviceDecl extends Decl {
-    private List<Capability> capabilities;
+    final private List<Capability> capabilities;
 
     public DeviceDecl(Name declName, List<Capability> capabilities) {
         super(declName);

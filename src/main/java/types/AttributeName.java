@@ -4,5 +4,5 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class AttributeName {
-    private Name attributeName;
+    final private Name attributeName;
 }

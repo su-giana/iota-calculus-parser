@@ -7,5 +7,5 @@ import java.util.List;
 
 @AllArgsConstructor
 public class Decls {
-    private List<Decl> decls;
+    final private List<Decl> decls;
 }

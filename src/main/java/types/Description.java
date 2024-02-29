@@ -5,5 +5,5 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class Description {
-    private String description;
+    final private String description;
 }

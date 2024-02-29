@@ -6,7 +6,7 @@ import types.ValueType;
 import java.util.List;
 
 public class OutputDecl extends Decl {
-    private List<ValueType> valueTypes;
+    final private List<ValueType> valueTypes;
 
     public OutputDecl(Name declName, List<ValueType> valueTypes) {
         super(declName);

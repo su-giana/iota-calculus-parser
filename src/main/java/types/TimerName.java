@@ -4,5 +4,5 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class TimerName {
-    private Name timerName;
+    final private Name timerName;
 }

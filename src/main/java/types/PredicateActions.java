@@ -4,6 +4,6 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class PredicateActions {
-    private Predicate predicate;
-    private Actions actions;
+    final private Predicate predicate;
+    final private Actions actions;
 }

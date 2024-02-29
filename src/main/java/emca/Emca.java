@@ -6,6 +6,6 @@ import types.MultiplePredicateActions;
 
 @AllArgsConstructor
 public class Emca {
-    private EventHandler eventHandler;
-    private MultiplePredicateActions multiplePredicateActions;
+    final private EventHandler eventHandler;
+    final private MultiplePredicateActions multiplePredicateActions;
 }

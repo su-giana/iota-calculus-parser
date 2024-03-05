@@ -6,5 +6,5 @@ import java.util.List;
 
 @AllArgsConstructor
 public class MultiplePredicateActions {
-    final private List<PredicateActions> multiplePredicateActions;
+    final private List<PredicateAction> multiplePredicateActions;
 }

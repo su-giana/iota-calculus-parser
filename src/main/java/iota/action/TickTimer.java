@@ -1,9 +1,14 @@
-package action;
+package iota.action;
 
 import lombok.AllArgsConstructor;
-import types.TimerName;
+import iota.types.TimerName;
 
 @AllArgsConstructor
 public class TickTimer implements Action {
     private final TimerName timerName;
+
+    @Override
+    public void print() {
+
+    }
 }

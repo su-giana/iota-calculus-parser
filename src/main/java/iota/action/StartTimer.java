@@ -1,11 +1,16 @@
-package action;
+package iota.action;
 
-import expression.Expression;
+import iota.expression.Expression;
 import lombok.AllArgsConstructor;
-import types.TimerName;
+import iota.types.TimerName;
 
 @AllArgsConstructor
 public class StartTimer implements Action {
     private final TimerName timerName;
     private final Expression expression;
+
+    @Override
+    public void print() {
+
+    }
 }

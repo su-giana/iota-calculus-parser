@@ -1,12 +1,19 @@
-package decl;
+package iota.decl;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import types.Name;
+import iota.types.Name;
 
 @Component
+@RequiredArgsConstructor
 public class TimerDecl implements Decl {
-    private Name timerName;
+    private String timerName;
     public TimerDecl(String jsonContext) {
-        this.timerName = new Name(jsonContext);
+        this.timerName = jsonContext;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("timerName : " + timerName);
     }
 }

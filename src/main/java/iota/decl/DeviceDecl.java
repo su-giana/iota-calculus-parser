@@ -1,15 +1,15 @@
-package decl;
+package iota.decl;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import types.Capability;
-import types.DeviceName;
-import types.Name;
-import util.JsonUtil;
+import iota.types.Capability;
+import iota.types.DeviceName;
+import iota.util.JsonUtil;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class DeviceDecl implements Decl {
     private DeviceName deviceName;
     private List<Capability> capabilities;
@@ -20,5 +20,12 @@ public class DeviceDecl implements Decl {
         this.capabilities = JsonUtil.processJsonList(deviceInfo.get(1)).stream()
                 .map(eachInfo -> new Capability(eachInfo))
                 .toList();
+    }
+
+    @Override
+    public void print() {
+        deviceName.print();
+        capabilities.stream()
+                .forEach(capa -> capa.print());
     }
 }

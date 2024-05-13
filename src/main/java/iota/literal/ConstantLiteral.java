@@ -1,8 +1,13 @@
-package literal;
+package iota.literal;
 
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class ConstantLiteral extends Literal {
+public class ConstantLiteral implements Literal {
     private final String constant;
+
+    @Override
+    public void print() {
+        System.out.println("ConstantLiteral : " + constant);
+    }
 }

@@ -1,21 +1,15 @@
-package rule;
+package iota.rule;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import emca.Emca;
+import iota.emca.Emca;
+import iota.util.JsonUtil;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import types.Decls;
-import types.Description;
-import util.JsonUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class LeafRule extends Rule {
     private Emca emca;
 
@@ -30,5 +24,10 @@ public class LeafRule extends Rule {
     private LeafRule(String des, String decls, String ecma) {
         super(des, decls);
         this.emca = Emca.fromJson(ecma);
+    }
+
+    public void print() {
+        super.print();
+        emca.print();
     }
 }

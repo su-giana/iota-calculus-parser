@@ -1,16 +1,16 @@
-package rule;
+package iota.rule;
 
+import iota.types.Rules;
+import iota.util.JsonUtil;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import types.Decls;
-import types.Description;
-import types.Rules;
-import util.JsonUtil;
 
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class NodeRule extends Rule {
-    final private Rules rules;
+    private Rules rules;
 
     public static NodeRule fromJson(String jsonContext) {
         List<String> components = JsonUtil.processJsonList(jsonContext);

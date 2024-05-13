@@ -1,0 +1,166 @@
+{
+    "Decl": [
+        {
+            "DeviceDecl": [
+                "humiditySensor1",
+                [
+                    [
+                        "relativeHumidityMeasurement",
+                        "0"
+                    ]
+                ]
+            ]
+        },
+        {
+            "InputDecl": [
+                "tooHumid",
+                "number",
+                0
+            ]
+        },
+        {
+            "InputDecl": [
+                "tooDry",
+                "number",
+                0
+            ]
+        },
+        {
+            "DeviceDecl": [
+                "switch1",
+                [
+                    [
+                        "switch",
+                        "on"
+                    ]
+                ]
+            ]
+        },
+        {
+            "OutputDecl": [
+                "send",
+                [
+                    "string"
+                ]
+            ]
+        }
+    ],
+    "LeafRule": [
+        "\"humidity-alert.groovy\"",
+        {
+            "EMCA": [
+                {
+                    "EventTo": [
+                        {
+                            "Field": [
+                                "humiditySensor1",
+                                "humidity"
+                            ]
+                        },
+                        {
+                            "ConstantLiteral": "currentHumidity"
+                        }
+                    ]
+                },
+                [
+                    [
+                        {
+                            "GreaterThanOrEqualTo": [
+                                {
+                                    "ExpressionPredicate": {
+                                        "IdentifierExpression": "currentHumidity"
+                                    }
+                                },
+                                {
+                                    "IdentifierExpression": "tooHumid"
+                                }
+                            ]
+                        },
+                        [
+                            {
+                                "OutputAction": [
+                                    "send",
+                                    [
+                                        {
+                                            "Addition": [
+                                                {
+                                                    "LiteralExpression": {
+                                                        "StringLiteral": "\"Sensed high humidity level: \""
+                                                    }
+                                                },
+                                                {
+                                                    "IdentifierExpression": "currentHumidity"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "CommandAction": [
+                                    {
+                                        "Field": [
+                                            "switch1",
+                                            "switch"
+                                        ]
+                                    },
+                                    {
+                                        "IdentifierExpression": "on"
+                                    }
+                                ]
+                            }
+                        ]
+                    ],
+                    [
+                        {
+                            "LessThan": [
+                                {
+                                    "ExpressionPredicate": {
+                                        "IdentifierExpression": "currntyHumidity"
+                                    }
+                                },
+                                {
+                                    "IdentifierExpression": "tooDry"
+                                }
+                            ]
+                        },
+                        [
+                            {
+                                "OutputAction": [
+                                    "send",
+                                    [
+                                        {
+                                            "Addition": [
+                                                {
+                                                    "LiteralExpression": {
+                                                        "StringLiteral": "\"Sensed low humidity level: \""
+                                                    }
+                                                },
+                                                {
+                                                    "IdentifierExpression": "currentHumidity"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "CommandAction": [
+                                    {
+                                        "Field": [
+                                            "switch1",
+                                            "switch"
+                                        ]
+                                    },
+                                    {
+                                        "IdentifierExpression": "off"
+                                    }
+                                ]
+                            }
+                        ]
+                    ]
+                ]
+            ]
+        }
+    ]
+}

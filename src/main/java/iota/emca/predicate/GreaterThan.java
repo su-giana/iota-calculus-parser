@@ -1,11 +1,16 @@
-package emca.predicate;
+package iota.emca.predicate;
 
-import expression.Expression;
-import lombok.AllArgsConstructor;
+import iota.expression.Expression;
 import org.springframework.stereotype.Component;
 
 @Component
 public class GreaterThan implements Predicate {
      private Predicate predicate;
      private Expression expression;
+
+     @Override
+     public void print() {
+          predicate.print();
+          expression.print();
+     }
 }

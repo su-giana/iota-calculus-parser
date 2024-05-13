@@ -1,8 +1,6 @@
-package types;
+package iota.types;
 
-import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Component;
-import util.JsonUtil;
+import iota.util.JsonUtil;
 
 import java.util.List;
 
@@ -14,5 +12,9 @@ public class Capability {
         List<String> nameAndState = JsonUtil.processJsonList(jsonContext);
         this.capabilityName = nameAndState.get(0);
         this.capabilityState = nameAndState.get(1);
+    }
+
+    public void print() {
+        System.out.println(capabilityName + " " + capabilityState);
     }
 }

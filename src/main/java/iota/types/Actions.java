@@ -1,14 +1,15 @@
-package types;
+package iota.types;
 
-import action.Action;
-import lombok.AllArgsConstructor;
+import iota.action.Action;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import util.JsonUtil;
+import iota.util.JsonUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class Actions {
     private List<Action> actions;
 
@@ -19,5 +20,10 @@ public class Actions {
         actionsJson.stream()
                 .map(actionJson -> Action.fromJson(actionJson))
                 .forEach(this.actions::add);
+    }
+
+    public void print() {
+        actions.stream()
+                .forEach(ac -> ac.print());
     }
 }

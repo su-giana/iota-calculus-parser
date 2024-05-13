@@ -1,4 +1,4 @@
-package types;
+package iota.types;
 
 import lombok.AllArgsConstructor;
 

@@ -1,12 +1,13 @@
-package types;
+package iota.types;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import util.JsonUtil;
+import iota.util.JsonUtil;
 
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class MultiplePredicateActions {
     private List<PredicateAction> multiplePredicateActions;
 
@@ -16,5 +17,10 @@ public class MultiplePredicateActions {
         this.multiplePredicateActions = predicateActions.stream()
                 .map(predicateActionsJson -> new PredicateAction(predicateActionsJson))
                 .toList();
+    }
+
+    public void print() {
+        multiplePredicateActions.stream()
+                .forEach(m -> m.print());
     }
 }

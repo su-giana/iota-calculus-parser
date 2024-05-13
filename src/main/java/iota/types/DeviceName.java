@@ -1,11 +1,13 @@
-package types;
-
-import lombok.AllArgsConstructor;
+package iota.types;
 
 public class DeviceName {
-    final private Name deviceName;
+    final private String deviceName;
+
+    public void print() {
+        System.out.println(deviceName);
+    }
 
     public DeviceName(String deviceName) {
-        this.deviceName = new Name(deviceName);
+        this.deviceName = deviceName;
     }
 }

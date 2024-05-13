@@ -1,13 +1,14 @@
-package types;
+package iota.types;
 
-import emca.predicate.Predicate;
-import lombok.AllArgsConstructor;
+import iota.emca.predicate.Predicate;
+import iota.util.JsonUtil;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import util.JsonUtil;
 
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class PredicateAction {
     private Predicate predicate;
     private Actions actions;
@@ -17,5 +18,10 @@ public class PredicateAction {
 
         this.predicate = Predicate.fromJson(predicateAction.get(0));
         this.actions = new Actions(predicateAction.get(1));
+    }
+
+    public void print() {
+        predicate.print();
+        actions.print();
     }
 }

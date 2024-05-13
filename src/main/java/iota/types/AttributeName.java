@@ -1,6 +1,4 @@
-package types;
-
-import lombok.AllArgsConstructor;
+package iota.types;
 
 public class AttributeName {
     final private Name attributeName;
